@@ -7,7 +7,7 @@ var users_count = document.querySelector(".users-count");
 var msg_send = document.querySelector("#user-send");
 var user_msg = document.querySelector("#user-msg");
 
-// Taking user name
+
 do {
   username = prompt("Enter your Name: ");
 } while (!username);
@@ -29,10 +29,13 @@ function userJoinLeft(name, status) {
 
   // user-join name ki class add karo so that yaha new <div> main same styling lag jai as 'user-join' class
   div.classList.add("user-join");
+
   // content that we will display in the <div>
   let content = `<p><b>${name}</b> ${status} the chat</p>`;
+
   div.innerHTML = content; // div ke ander kya likha hoga add kardo in form of HTML
   // jabhi koi neya user join hoga ek new div create hoke content add hoga and chats query Selector main append hojaiga new div
+  
   chats.appendChild(div);
   // jabhi koi neya message aye screen upar chalte jai and neya message neeche ate jai
   chats.scrollTop = chats.scrollHeight;
