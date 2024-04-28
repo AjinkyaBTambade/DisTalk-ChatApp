@@ -88,7 +88,7 @@ function appendMessage(data, status) {
     <h5>${data.user}</h5>
     <p>${data.msg}</p>
     `;
-  div.innerHTML = content;ew div
+  div.innerHTML = content;
   chats.appendChild(div);
 
   chats.scrollTop = chats.scrollHeight;
